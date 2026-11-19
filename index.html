@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Street | Sneakers premium — Mizuno, Jordan, TN, Air Force</title>
+  <meta name="description" content="Street — catálogo de sneakers premium: Mizuno Wave Prophecy, Air Jordan, Nike TN, Air Max 95, Air Force e mais. Preços especiais, autenticidade e atendimento no WhatsApp." />
+  <meta name="theme-color" content="#0A0A0A" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Marca que o JS está ativo (as animações de entrada só escondem conteúdo se o JS rodar) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#0A0A0A',   // fundo principal
+            coal:   '#141414',   // superfícies
+            slate:  '#1A1A1A',   // superfícies elevadas
+            line:   '#2A2A2A',   // bordas
+            mute:   '#A3A3A3',   // texto secundário (contraste AA sobre #0A0A0A)
+            accent: { DEFAULT: '#F97316', soft: '#FB923C' }
+          },
+          fontFamily: {
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Oswald', 'Impact', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-padding-top: 5.5rem; }
+    body { background: #0A0A0A; color: #fff; }
+
+    /* Foco visível e consistente */
+    :focus-visible { outline: 2px solid #F97316; outline-offset: 3px; border-radius: 6px; }
+
+    /* Títulos de display */
+    .h-display { font-family: Oswald, Impact, sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: .005em; line-height: 1.02; }
+
+    /* Entrada suave: só aplica quando o JS está ativo */
+    .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+    .js .reveal.is-in { opacity: 1; transform: none; }
+
+    /* Card de produto */
+    .card { transition: transform .35s cubic-bezier(.2,.7,.2,1), border-color .35s ease, box-shadow .35s ease; }
+    .card:hover, .card:focus-visible { transform: translateY(-6px); border-color: #3a3a3a; box-shadow: 0 24px 40px -24px rgba(0,0,0,.9); }
+    .card img { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+    .card:hover img, .card:focus-visible img { transform: scale(1.05); }
+
+    /* Card de categoria */
+    .cat-card img { transition: transform .7s cubic-bezier(.2,.7,.2,1), opacity .4s ease; }
+    .cat-card:hover img { transform: scale(1.04); }
+
+    /* Filtros */
+    .chip { transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
+    .chip[aria-pressed="true"] { background: #F97316; border-color: #F97316; color: #0A0A0A; }
+
+    /* Modal nativo (<dialog>) */
+    dialog#productModal { color: #fff; background: transparent; padding: 0; border: 0; max-width: 100vw; max-height: 100dvh; margin: auto; }
+    dialog#productModal::backdrop { background: rgba(0,0,0,.78); backdrop-filter: blur(6px); }
+    dialog#productModal[open] .modal-panel { animation: pop .28s cubic-bezier(.2,.7,.2,1); }
+    @keyframes pop { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+
+    /* FAQ */
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform .25s ease; }
+
+    /* Linha do processo (desktop) */
+    @media (min-width: 1024px) {
+      .steps::before { content: ""; position: absolute; left: 0; right: 0; top: 1.5rem; height: 1px; background: #2A2A2A; }
+    }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+
+    /* Respeita quem prefere menos movimento */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto !important; }
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+      .card, .card img, .cat-card img, dialog#productModal[open] .modal-panel { transition: none; animation: none; }
+      .card:hover, .card:focus-visible { transform: none; }
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased selection:bg-accent selection:text-ink">
+
+  <a href="#catalogo" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:bg-accent focus:text-ink focus:px-4 focus:py-2 focus:rounded-full">Ir para o catálogo</a>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 md:h-20">
+      <a href="#inicio" class="flex items-center gap-3" aria-label="Street, ir para o início">
+        <img src="data:image/png;base64,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" alt="" width="440" height="205" class="h-9 w-auto md:h-11" />
+        <span class="h-display hidden text-xl tracking-[.18em] sm:block">Street</span>
+      </a>
+
+      <nav class="hidden items-center gap-9 text-sm font-medium text-neutral-300 md:flex" aria-label="Principal">
+        <a data-nav href="#inicio" class="transition-colors hover:text-white">Início</a>
+        <a data-nav href="#catalogo" class="transition-colors hover:text-white">Catálogo</a>
+        <a data-nav href="#categorias" class="transition-colors hover:text-white">Categorias</a>
+        <a data-nav href="#sobre" class="transition-colors hover:text-white">Sobre</a>
+        <a data-nav href="#contato" class="transition-colors hover:text-white">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button id="searchToggle" type="button" class="grid h-10 w-10 place-items-center rounded-full text-neutral-300 transition-colors hover:bg-slate hover:text-white" aria-label="Buscar modelos" aria-expanded="false" aria-controls="searchBar">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <a href="#catalogo" class="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-accent-soft sm:inline-flex">Ver catálogo</a>
+        <button id="menuToggle" type="button" class="grid h-10 w-10 place-items-center rounded-full text-neutral-300 transition-colors hover:bg-slate hover:text-white md:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg id="iconOpen" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="iconClose" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Busca discreta -->
+    <div id="searchBar" hidden class="border-t border-line bg-ink/95 backdrop-blur">
+      <div class="mx-auto max-w-2xl px-5 py-4 sm:px-8">
+        <label for="searchInput" class="sr-only">Buscar modelo</label>
+        <div class="relative">
+          <svg class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-mute" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="Busque por modelo. Ex.: Mizuno, TN, Jordan 4, Air Force" class="w-full rounded-full border border-line bg-coal py-3 pl-12 pr-5 text-sm text-white placeholder-neutral-500 transition-colors focus:border-accent focus:outline-none" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu mobile -->
+    <div id="mobileMenu" hidden class="border-t border-line bg-ink md:hidden">
+      <nav class="mx-auto max-w-7xl px-5 py-4 sm:px-8" aria-label="Menu mobile">
+        <a href="#inicio" class="block border-b border-line py-4 text-lg font-medium">Início</a>
+        <a href="#catalogo" class="block border-b border-line py-4 text-lg font-medium">Catálogo</a>
+        <a href="#categorias" class="block border-b border-line py-4 text-lg font-medium">Categorias</a>
+        <a href="#sobre" class="block border-b border-line py-4 text-lg font-medium">Sobre</a>
+        <a href="#contato" class="block py-4 text-lg font-medium">Contato</a>
+        <a href="#catalogo" class="mt-2 block rounded-full bg-accent py-3.5 text-center font-semibold text-ink">Ver catálogo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="inicio" class="relative pt-28 pb-20 md:pt-36 md:pb-28">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-12 lg:gap-10">
+
+        <div class="lg:col-span-6 xl:col-span-6">
+          <h1 class="h-display text-[2.9rem] sm:text-6xl xl:text-[5.4rem]">
+            Nike de verdade, escolhido par a par.
+          </h1>
+          <p class="mt-7 max-w-xl text-lg leading-relaxed text-neutral-300">
+            A Street é um centro de distribuição de sneakers de alto padrão. Cada modelo passa por curadoria, a autenticidade é garantida e você fala direto com quem separa o seu par.
+          </p>
+
+          <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+            <a href="#catalogo" class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 font-semibold text-ink transition-colors hover:bg-accent-soft">Ver catálogo</a>
+            <a href="#contato" class="inline-flex items-center justify-center rounded-full border border-neutral-600 px-8 py-4 font-medium transition-colors hover:border-white">Falar com a Street</a>
+          </div>
+
+          <!-- Prova social rápida -->
+          <dl class="mt-14 grid max-w-xl gap-6 border-t border-line pt-8 sm:grid-cols-3">
+            <div>
+              <dt class="sr-only">Modelos</dt>
+              <dd class="h-display text-3xl">+100</dd>
+              <dd class="mt-1 text-sm text-mute">modelos disponíveis</dd>
+            </div>
+            <div>
+              <dt class="sr-only">Atendimento</dt>
+              <dd class="text-base font-semibold leading-tight">Atendimento personalizado</dd>
+              <dd class="mt-1 text-sm text-mute">direto no Instagram</dd>
+            </div>
+            <div>
+              <dt class="sr-only">Autenticidade</dt>
+              <dd class="text-base font-semibold leading-tight">Autenticidade garantida</dd>
+              <dd class="mt-1 text-sm text-mute">sem réplica</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Composição de produto (preenchida via JS com os dados do catálogo) -->
+        <div class="lg:col-span-6 xl:col-span-6">
+          <div id="heroVisual" class="relative mx-auto max-w-[34rem] lg:max-w-none"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BARRA DE CONFIANÇA ============ -->
+    <section aria-label="Diferenciais" class="border-y border-line bg-coal">
+      <ul class="mx-auto grid max-w-7xl gap-px bg-line sm:grid-cols-2 lg:grid-cols-4">
+        <li class="flex gap-4 bg-coal px-5 py-8 sm:px-8">
+          <svg class="mt-0.5 h-7 w-7 flex-none text-accent" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3 4.5 6v5.5c0 4.4 3 8.1 7.5 9.5 4.5-1.4 7.5-5.1 7.5-9.5V6L12 3Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 12 2.2 2.2L15.5 10"/></svg>
+          <div>
+            <h3 class="font-semibold">Autenticidade garantida</h3>
+            <p class="mt-1 text-sm leading-relaxed text-mute">Só entra no catálogo o que podemos garantir como original.</p>
+          </div>
+        </li>
+        <li class="flex gap-4 bg-coal px-5 py-8 sm:px-8">
+          <svg class="mt-0.5 h-7 w-7 flex-none text-accent" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path stroke-linecap="round" d="m20 20-4.8-4.8"/><path stroke-linecap="round" stroke-linejoin="round" d="m8 10.5 1.8 1.8L13 9"/></svg>
+          <div>
+            <h3 class="font-semibold">Curadoria especializada</h3>
+            <p class="mt-1 text-sm leading-relaxed text-mute">Mizuno, Jordan, TN, Air Max e Air Force — escolhidos um a um.</p>
+          </div>
+        </li>
+        <li class="flex gap-4 bg-coal px-5 py-8 sm:px-8">
+          <svg class="mt-0.5 h-7 w-7 flex-none text-accent" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12a7.5 7.5 0 0 1-11 6.6L4 20l1.4-4.6A7.5 7.5 0 1 1 20 12Z"/></svg>
+          <div>
+            <h3 class="font-semibold">Atendimento personalizado</h3>
+            <p class="mt-1 text-sm leading-relaxed text-mute">Conversa de verdade para confirmar modelo, tamanho e condições.</p>
+          </div>
+        </li>
+        <li class="flex gap-4 bg-coal px-5 py-8 sm:px-8">
+          <svg class="mt-0.5 h-7 w-7 flex-none text-accent" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m3 7.5 9 4.5 9-4.5M12 12v9"/></svg>
+          <div>
+            <h3 class="font-semibold">Entrega rápida</h3>
+            <p class="mt-1 text-sm leading-relaxed text-mute">Estoque de distribuição para o seu pedido sair sem demora.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ CATEGORIAS ============ -->
+    <section id="categorias" class="py-24 md:py-32">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="reveal max-w-2xl">
+          <h2 class="h-display text-4xl md:text-5xl">Escolha pela linha</h2>
+          <p class="mt-4 text-lg text-neutral-300">Toque em uma categoria e o catálogo já abre filtrado.</p>
+        </div>
+
+        <ul id="categoryGrid" class="reveal mt-12 grid gap-4 sm:grid-cols-2 md:gap-6"></ul>
+      </div>
+    </section>
+
+    <!-- ============ CATÁLOGO ============ -->
+    <section id="catalogo" class="border-t border-line bg-coal py-24 md:py-32">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="reveal flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-2xl">
+            <h2 class="h-display text-4xl md:text-5xl">Catálogo</h2>
+            <p class="mt-4 text-lg text-neutral-300">Disponibilidade e tamanhos são confirmados no atendimento antes de fechar o pedido.</p>
+          </div>
+
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div class="relative sm:w-64">
+              <label for="catalogSearch" class="sr-only">Buscar no catálogo</label>
+              <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-mute" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
+              <input id="catalogSearch" type="search" autocomplete="off" placeholder="Buscar modelo" class="w-full rounded-full border border-line bg-ink py-2.5 pl-10 pr-4 text-sm placeholder-neutral-500 transition-colors focus:border-accent focus:outline-none" />
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal mt-8 flex flex-wrap items-center justify-between gap-4">
+          <div id="filters" class="no-scrollbar -mx-5 flex gap-2 overflow-x-auto px-5 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0" role="group" aria-label="Filtrar por categoria">
+            <button type="button" class="chip flex-none rounded-full border border-line px-5 py-2.5 text-sm font-medium hover:border-neutral-500" data-filter="all" aria-pressed="true">Todos</button>
+            <button type="button" class="chip flex-none rounded-full border border-line px-5 py-2.5 text-sm font-medium hover:border-neutral-500" data-filter="mizuno" aria-pressed="false">Mizuno</button>
+            <button type="button" class="chip flex-none rounded-full border border-line px-5 py-2.5 text-sm font-medium hover:border-neutral-500" data-filter="tn" aria-pressed="false">TN</button>
+            <button type="button" class="chip flex-none rounded-full border border-line px-5 py-2.5 text-sm font-medium hover:border-neutral-500" data-filter="jordan" aria-pressed="false">Jordan</button>
+            <button type="button" class="chip flex-none rounded-full border border-line px-5 py-2.5 text-sm font-medium hover:border-neutral-500" data-filter="air-max" aria-pressed="false">Air Max</button>
+            <button type="button" class="chip flex-none rounded-full border border-line px-5 py-2.5 text-sm font-medium hover:border-neutral-500" data-filter="air-force" aria-pressed="false">Air Force</button>
+            <button type="button" class="chip flex-none rounded-full border border-line px-5 py-2.5 text-sm font-medium hover:border-neutral-500" data-filter="dunk" aria-pressed="false">Dunk</button>
+            <button type="button" class="chip flex-none rounded-full border border-line px-5 py-2.5 text-sm font-medium hover:border-neutral-500" data-filter="ambush" aria-pressed="false">Edições</button>
+          </div>
+          <p id="resultCount" class="text-sm text-mute" aria-live="polite"></p>
+        </div>
+
+        <ul id="productGrid" class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-6"></ul>
+
+        <div id="noResults" hidden class="py-20 text-center">
+          <p class="text-lg font-semibold">Nenhum modelo com esse filtro.</p>
+          <p class="mx-auto mt-2 max-w-md text-mute">Limpe a busca ou fale com a gente. Se o par que você quer não está aqui, a gente procura.</p>
+          <div class="mt-6 flex flex-wrap justify-center gap-3">
+            <button id="clearFilters" type="button" class="rounded-full border border-neutral-600 px-6 py-3 text-sm font-medium transition-colors hover:border-white">Limpar filtros</button>
+            <a href="#contato" class="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-accent-soft">Pedir um modelo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section id="sobre" class="py-24 md:py-32">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16">
+        <div class="reveal lg:col-span-5">
+          <h2 class="h-display text-4xl md:text-5xl lg:text-6xl">A Street não é vitrine. É centro de distribuição.</h2>
+        </div>
+
+        <div class="reveal space-y-6 text-lg leading-relaxed text-neutral-300 lg:col-span-7 lg:pt-3">
+          <p>
+            Nós selecionamos e distribuímos sneakers premium: Mizuno Wave Prophecy, Air Jordan, Nike TN, Air Max 95/DN e Air Force. Antes de entrar no catálogo, cada modelo passa por curadoria.
+          </p>
+          <p>
+            Trabalhamos só com o que podemos garantir como autêntico. Réplica não entra, e isso vale para o par mais barato e para a edição mais disputada.
+          </p>
+          <p>
+            O atendimento é conversa, não carrinho. Você escolhe o modelo, a gente confirma tamanho e disponibilidade no direct e fecha o pedido com você. Se não tiver o seu número, a gente avisa na hora.
+          </p>
+
+          <ul class="grid gap-4 pt-4 sm:grid-cols-3">
+            <li class="rounded-2xl border border-line bg-coal p-5">
+              <p class="font-semibold text-white">Distribuição especializada</p>
+              <p class="mt-1 text-base text-mute">Foco total em sneakers premium e lançamentos.</p>
+            </li>
+            <li class="rounded-2xl border border-line bg-coal p-5">
+              <p class="font-semibold text-white">Curadoria modelo a modelo</p>
+              <p class="mt-1 text-base text-mute">Nada entra no catálogo por volume.</p>
+            </li>
+            <li class="rounded-2xl border border-line bg-coal p-5">
+              <p class="font-semibold text-white">Atendimento direto</p>
+              <p class="mt-1 text-base text-mute">Você fala com gente, não com robô.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMO FUNCIONA ============ -->
+    <section id="processo" class="border-t border-line bg-coal py-24 md:py-32">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="reveal max-w-2xl">
+          <h2 class="h-display text-4xl md:text-5xl">Como funciona</h2>
+          <p class="mt-4 text-lg text-neutral-300">Quatro passos, sem cadastro e sem complicação.</p>
+        </div>
+
+        <ol class="steps reveal relative mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          <li class="relative">
+            <span class="relative z-10 grid h-12 w-12 place-items-center rounded-full border border-line bg-ink font-display text-lg font-semibold text-accent">1</span>
+            <h3 class="mt-5 text-lg font-semibold">Escolha o modelo</h3>
+            <p class="mt-2 leading-relaxed text-mute">Navegue pelo catálogo e separe o que você quer. Pode ser mais de um.</p>
+          </li>
+          <li class="relative">
+            <span class="relative z-10 grid h-12 w-12 place-items-center rounded-full border border-line bg-ink font-display text-lg font-semibold text-accent">2</span>
+            <h3 class="mt-5 text-lg font-semibold">Entre em contato</h3>
+            <p class="mt-2 leading-relaxed text-mute">Chame a Street no Instagram ou use o formulário de interesse.</p>
+          </li>
+          <li class="relative">
+            <span class="relative z-10 grid h-12 w-12 place-items-center rounded-full border border-line bg-ink font-display text-lg font-semibold text-accent">3</span>
+            <h3 class="mt-5 text-lg font-semibold">Confirmamos disponibilidade e tamanho</h3>
+            <p class="mt-2 leading-relaxed text-mute">A gente checa o estoque e o seu número antes de qualquer pagamento.</p>
+          </li>
+          <li class="relative">
+            <span class="relative z-10 grid h-12 w-12 place-items-center rounded-full border border-line bg-ink font-display text-lg font-semibold text-accent">4</span>
+            <h3 class="mt-5 text-lg font-semibold">Finalizamos</h3>
+            <p class="mt-2 leading-relaxed text-mute">Combinamos pagamento e envio, e o seu par segue para você.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="py-24 md:py-32">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16">
+        <div class="reveal lg:col-span-4">
+          <h2 class="h-display text-4xl md:text-5xl">Perguntas frequentes</h2>
+          <p class="mt-4 text-lg text-neutral-300">Não achou a sua dúvida? Chame a gente no direct.</p>
+        </div>
+
+        <div class="reveal divide-y divide-line border-y border-line lg:col-span-8">
+          <details class="group py-1">
+            <summary class="flex items-center justify-between gap-6 py-5 text-lg font-medium">
+              Os tênis são originais?
+              <svg class="faq-icon h-5 w-5 flex-none text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <p class="max-w-2xl pb-6 leading-relaxed text-neutral-300">Sim. A Street trabalha com curadoria e não vende réplica. Se você quiser conferir detalhes de um modelo antes de fechar, é só pedir no atendimento.</p>
+          </details>
+          <details class="group py-1">
+            <summary class="flex items-center justify-between gap-6 py-5 text-lg font-medium">
+              Como sei se tem o meu tamanho?
+              <svg class="faq-icon h-5 w-5 flex-none text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <p class="max-w-2xl pb-6 leading-relaxed text-neutral-300">A disponibilidade muda com frequência, por isso confirmamos modelo e tamanho com você no atendimento. Mande o modelo e o número que você calça.</p>
+          </details>
+          <details class="group py-1">
+            <summary class="flex items-center justify-between gap-6 py-5 text-lg font-medium">
+              Por que o catálogo diz "disponível sob consulta"?
+              <svg class="faq-icon h-5 w-5 flex-none text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <p class="max-w-2xl pb-6 leading-relaxed text-neutral-300">Somos distribuição, não prateleira. O estoque gira rápido, então confirmamos cada pedido antes de cobrar qualquer valor. Assim você não paga por um par que acabou.</p>
+          </details>
+          <details class="group py-1">
+            <summary class="flex items-center justify-between gap-6 py-5 text-lg font-medium">
+              Quais são as formas de pagamento?
+              <svg class="faq-icon h-5 w-5 flex-none text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <p class="max-w-2xl pb-6 leading-relaxed text-neutral-300">As condições de pagamento são combinadas no atendimento, depois que o modelo e o tamanho estão confirmados. Pergunte pelas opções disponíveis no momento do pedido.</p>
+          </details>
+          <details class="group py-1">
+            <summary class="flex items-center justify-between gap-6 py-5 text-lg font-medium">
+              Qual é o prazo de entrega?
+              <svg class="faq-icon h-5 w-5 flex-none text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <p class="max-w-2xl pb-6 leading-relaxed text-neutral-300">O prazo depende da sua região e do modelo. Informamos o prazo real durante o atendimento, antes de você confirmar o pedido.</p>
+          </details>
+          <details class="group py-1">
+            <summary class="flex items-center justify-between gap-6 py-5 text-lg font-medium">
+              Os preços e as fotos do site são finais?
+              <svg class="faq-icon h-5 w-5 flex-none text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <p class="max-w-2xl pb-6 leading-relaxed text-neutral-300">Os preços podem mudar e as imagens são ilustrativas. O valor e os detalhes do par que você vai receber são confirmados no atendimento.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section id="contato" class="border-t border-line bg-coal py-24 md:py-32">
+      <div class="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16">
+
+        <div class="reveal lg:col-span-5">
+          <h2 class="h-display text-4xl md:text-5xl">Fale com a Street</h2>
+          <p class="mt-4 max-w-md text-lg leading-relaxed text-neutral-300">
+            O atendimento é personalizado e acontece por mensagem direta. Mande o modelo que você quer e o seu tamanho que a gente responde com a disponibilidade.
+          </p>
+
+          <ul class="mt-10 space-y-3">
+            <li>
+              <a href="https://instagram.com/loja_street2k25" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-2xl border border-line bg-ink p-4 transition-colors hover:border-neutral-500">
+                <span class="grid h-11 w-11 flex-none place-items-center rounded-full bg-slate text-accent">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg>
+                </span>
+                <span>
+                  <span class="block font-semibold">Instagram <span class="ml-1 rounded-full bg-accent px-2 py-0.5 align-middle text-xs font-semibold text-ink">atendimento</span></span>
+                  <span class="block text-sm text-mute">@loja_street2k25</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/5511958566772" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-2xl border border-line bg-ink p-4 transition-colors hover:border-neutral-500">
+                <span class="grid h-11 w-11 flex-none place-items-center rounded-full bg-slate text-accent">
+                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </span>
+                <span>
+                  <span class="block font-semibold">WhatsApp</span>
+                  <span class="block text-sm text-mute">(11) 95856-6772</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Formulário de interesse -->
+        <div class="reveal lg:col-span-7">
+          <form id="interestForm" class="rounded-3xl border border-line bg-ink p-6 sm:p-10" novalidate>
+            <h3 class="text-2xl font-semibold">Formulário de interesse</h3>
+            <p class="mt-2 text-mute">Preencha e a gente monta a mensagem para você enviar no direct.</p>
+
+            <div class="mt-8 grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="fNome" class="mb-2 block text-sm font-medium">Seu nome</label>
+                <input id="fNome" name="nome" type="text" autocomplete="name" required class="w-full rounded-xl border border-line bg-coal px-4 py-3.5 placeholder-neutral-500 transition-colors focus:border-accent focus:outline-none" placeholder="Como podemos te chamar?" />
+              </div>
+              <div>
+                <label for="fZap" class="mb-2 block text-sm font-medium">WhatsApp</label>
+                <input id="fZap" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required class="w-full rounded-xl border border-line bg-coal px-4 py-3.5 placeholder-neutral-500 transition-colors focus:border-accent focus:outline-none" placeholder="(00) 00000-0000" />
+              </div>
+              <div class="sm:col-span-2">
+                <label for="fModelo" class="mb-2 block text-sm font-medium">Modelo desejado</label>
+                <input id="fModelo" name="modelo" type="text" list="modelList" required class="w-full rounded-xl border border-line bg-coal px-4 py-3.5 placeholder-neutral-500 transition-colors focus:border-accent focus:outline-none" placeholder="Comece a digitar o nome do modelo" />
+                <datalist id="modelList"></datalist>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="fTam" class="mb-2 block text-sm font-medium">Tamanho <span class="font-normal text-mute">(opcional)</span></label>
+                <input id="fTam" name="tamanho" type="text" inputmode="numeric" class="w-full rounded-xl border border-line bg-coal px-4 py-3.5 placeholder-neutral-500 transition-colors focus:border-accent focus:outline-none" placeholder="Ex.: 42" />
+              </div>
+            </div>
+
+            <button type="submit" class="mt-8 inline-flex w-full items-center justify-center rounded-full bg-accent px-8 py-4 font-semibold text-ink transition-colors hover:bg-accent-soft sm:w-auto">Enviar interesse</button>
+            <p id="formStatus" class="mt-5 text-sm leading-relaxed text-neutral-300" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-line py-14">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8">
+      <div class="grid gap-10 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <a href="#inicio" class="inline-flex items-center gap-3" aria-label="Street, voltar ao topo">
+            <img src="data:image/png;base64,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" alt="" width="440" height="205" loading="lazy" class="h-10 w-auto" />
+            <span class="h-display text-xl tracking-[.18em]">Street</span>
+          </a>
+          <p class="mt-5 max-w-sm leading-relaxed text-mute">Catálogo de sneakers premium: Mizuno, Jordan, TN, Air Max e Air Force. Curadoria, autenticidade e atendimento de verdade.</p>
+        </div>
+
+        <nav class="md:col-span-3" aria-label="Links rápidos">
+          <p class="font-semibold">Links rápidos</p>
+          <ul class="mt-4 space-y-2.5 text-mute">
+            <li><a class="transition-colors hover:text-white" href="#catalogo">Catálogo</a></li>
+            <li><a class="transition-colors hover:text-white" href="#categorias">Categorias</a></li>
+            <li><a class="transition-colors hover:text-white" href="#sobre">Sobre</a></li>
+            <li><a class="transition-colors hover:text-white" href="#faq">Perguntas frequentes</a></li>
+            <li><a class="transition-colors hover:text-white" href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="md:col-span-4">
+          <p class="font-semibold">Redes</p>
+          <ul class="mt-4 space-y-2.5 text-mute">
+            <li><a class="transition-colors hover:text-white" href="https://instagram.com/loja_street2k25" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a class="transition-colors hover:text-white" href="https://wa.me/5511958566772" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col gap-3 border-t border-line pt-8 text-sm text-neutral-500 md:flex-row md:justify-between">
+        <p>© <span id="year">2026</span> Street. Todos os direitos reservados.</p>
+        <p>Preços sujeitos a alteração. Imagens ilustrativas.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ MODAL DO PRODUTO ============ -->
+  <dialog id="productModal" aria-labelledby="modalName">
+    <div class="modal-panel relative mx-auto grid w-[min(92vw,56rem)] overflow-hidden rounded-3xl border border-line bg-coal md:grid-cols-2">
+      <button id="modalClose" type="button" class="absolute right-3 top-3 z-10 grid h-10 w-10 place-items-center rounded-full bg-ink/80 transition-colors hover:bg-ink" aria-label="Fechar">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+
+      <div class="aspect-square bg-slate md:aspect-auto">
+        <img id="modalImg" src="" alt="" class="h-full w-full object-cover" />
+      </div>
+
+      <div class="flex flex-col p-7 sm:p-10">
+        <p id="modalCat" class="inline-flex w-fit items-center gap-2 rounded-full border border-line px-3 py-1 text-xs font-medium text-neutral-300"></p>
+        <h3 id="modalName" class="h-display mt-5 text-3xl sm:text-4xl"></h3>
+        <p id="modalPrice" class="mt-5 font-display text-4xl font-semibold"></p>
+        <p class="mt-5 text-mute"><span class="font-medium text-neutral-200">Disponível sob consulta.</span> Confirmamos estoque, tamanho e condições de pagamento no atendimento, antes de qualquer cobrança.</p>
+
+        <div class="mt-auto pt-8">
+          <a id="modalCta" href="#contato" class="block rounded-full bg-accent py-4 text-center font-semibold text-ink transition-colors hover:bg-accent-soft">Quero este modelo</a>
+          <p class="mt-3 text-center text-xs text-neutral-500">Preço sujeito a alteração. Imagem ilustrativa.</p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    /* =====================================================================
+       CONFIGURAÇÃO
+       Se quiser receber os interesses direto no WhatsApp, coloque o número
+       com DDI + DDD, só dígitos (ex.: '5563999999999'). Vazio = usa o
+       direct do Instagram.
+       ===================================================================== */
+    const WHATSAPP_NUMBER = '5511958566772';
+    const INSTAGRAM_USER  = 'loja_street2k25';
+
+    /* =====================================================================
+       DADOS DOS PRODUTOS (mantidos exatamente como no código original)
+       ===================================================================== */
+    const products = [
+      // ===== CATÁLOGO ANTERIOR (mantido) =====
+      { id: 1,  name: "AIR FORCE ON BRANCO", cat: "air-force", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/3d12684f-ff0e-441c-ac64-474f649053cb-eb5f4a4a5febbed04e17934650038221-480-0.webp" },
+      { id: 2,  name: "AIR FORCE ON PRETO / PRETO", cat: "air-force", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/daa9120e-990e-414d-884c-3d534ea79469-5e8f7d2a08ecc3726817934650037625-480-0.webp" },
+      { id: 3,  name: "AIR FORCE ON PRETO NOBUCK / PRATA", cat: "air-force", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/bd8bc915-2cbe-4452-9a04-2bcb3dbda2f7-6fe5799cc135bec5eb17913257965745-480-0.webp" },
+      { id: 4,  name: "AIR FORCE ON GARTER SNAKE", cat: "air-force", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/e2199cc3-1e16-47d4-a882-e910f9ac5638-c870ff826277430ef517913257971796-480-0.webp" },
+      { id: 5,  name: "AIR FORCE ON CROMO / GELO", cat: "air-force", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/0de110e8-3146-4d25-aecd-6835025815c2-55d9e3159f1e74f82917912533842868-480-0.webp" },
+      { id: 6,  name: "AIR FORCE ON CELESTE AZUL", cat: "air-force", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/97da7cb6-6e5a-49f0-879a-04c02ab990f0-10c08f8ffca5d6f05117912533845344-480-0.webp" },
+      { id: 7,  name: "AIR FORCE ON TARTUFO / OFF WHITE", cat: "air-force", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/62af3de4-49e5-4149-babb-cbff74ccf4a9-d958a96f814c9dab8517899980370864-480-0.webp" },
+      { id: 8,  name: "AIR FORCE ON PRETO NOBUCK / BRANCO", cat: "air-force", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/img_0161-83b461d86dfd43fbaa17816726108651-480-0.webp" },
+      { id: 9,  name: "AIR JORDAN AZUL JEANS / BR NOBUK", cat: "jordan", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/55ccaa7a-1d7f-41de-b673-b75c7fb151aa-1cc305996aae7cab1117912460401133-480-0.webp" },
+      { id: 10, name: "AIR JORDAN MARINHO / BRANCO", cat: "jordan", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/c7bd754b-09a7-432c-b74d-0908e4e03581-cf8731dca93e0c237417912460406404-480-0.webp" },
+      { id: 11, name: "AIR JORDAN PANDA / VERNIZ", cat: "jordan", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/d3c5b087-d69f-4f19-89fc-a958bd6f2add-609a6ed992b15b7f7817910624889959-480-0.webp" },
+      { id: 12, name: "AIR JORDAN DUNAS GRAFITE", cat: "jordan", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/39b02eee-cf9f-4f12-b669-f660755f6dd1-5cf3f634cb06673f7117910624886444-480-0.webp" },
+      { id: 13, name: "AIR JORDAN CROMO / BRANCO", cat: "jordan", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/a8f6e593-cb96-4083-b6e9-8e42302b7dd2-3bdd01f7d2df9eced617898256336357-480-0.webp" },
+      { id: 14, name: "AIR JORDAN CELTICS", cat: "jordan", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/861b3f1f-cf9b-4ffc-bcfd-c88c91b6ca35-6aa7b0c14e5c46792f17912500582062-480-0.webp" },
+      { id: 15, name: "AIR JORDAN 4 BRANCO / PRETO", cat: "jordan", price: 400, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/720340d3-fec9-4917-a17a-a07190e7a8a2-bbc1cd5d34bd84fe7217912500583848-480-0.webp" },
+      { id: 16, name: "AIR JORDAN 4 BRANCO / VERDE", cat: "jordan", price: 400, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/faecb54e-6a5f-49b2-bc7f-74b6a149a15e-b1566d19cef16e814a17912541384898-480-0.webp" },
+      { id: 17, name: "NIKE DUNK LOW VENIZ", cat: "dunk", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/b1c58402-eac2-4f14-86d3-8d81e038bc17-2be237a9baf980408917912541386760-480-0.webp" },
+      { id: 18, name: "NIKE DUNK LOW AZUL POLAR / BRANCO", cat: "dunk", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/28da1d2f-c7c9-468e-a5ca-ffb6331a73e2-27aac9f9499ed7ecfc17912496592663-480-0.webp" },
+      { id: 19, name: "NIKE DUNK LOW CINZA NATURAL", cat: "dunk", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/073895cb-9b62-4588-a13b-a81e12747fd1-9cd7308da8640c348917912496592880-480-0.webp" },
+      { id: 20, name: "NIKE DUNK LOW PANDA", cat: "dunk", price: 300, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/47c38483-609a-4c22-b4a8-9023a679c464-09a7978ab1756e88bc17912461941691-480-0.webp" },
+      { id: 21, name: "NIKE AMBUSH BRANCO / AZUL CLARO", cat: "ambush", price: 330, img: "https://acdn-us.mitiendanube.com/stores/006/733/177/products/3d12684f-ff0e-441c-ac64-474f649053cb-eb5f4a4a5febbed04e17934650038221-480-0.webp" },
+
+      // ===== NOVOS PRODUTOS (fotos reais + preços que você enviou) =====
+      // Mizuno
+      { id: 22, name: "MIZUNO WAVE PROPHECY 15 PRETO / VERDE", cat: "mizuno", price: 450, img: "images/products/prod-35.jpg" },
+      { id: 23, name: "MIZUNO WAVE PROPHECY 15 CINZA / LIMA", cat: "mizuno", price: 450, img: "images/products/prod-40.jpg" },
+      { id: 24, name: "MIZUNO WAVE PROPHECY 15 AZUL / PRETO", cat: "mizuno", price: 450, img: "images/products/prod-36.jpg" },
+      { id: 25, name: "MIZUNO WAVE PROPHECY 15 CINZA / VERDE", cat: "mizuno", price: 450, img: "images/products/prod-41.jpg" },
+      { id: 26, name: "MIZUNO WAVE PROPHECY 15 BRANCO / CINZA", cat: "mizuno", price: 450, img: "images/products/prod-45.jpg" },
+      { id: 27, name: "MIZUNO WAVE PROPHECY 14 AZUL", cat: "mizuno", price: 370, img: "images/products/prod-30.jpg" },
+      { id: 28, name: "MIZUNO WAVE PROPHECY 13 PRETO", cat: "mizuno", price: 370, img: "images/products/prod-25.jpg" },
+      { id: 29, name: "MIZUNO WAVE PROPHECY 13 PRETO FOSCO", cat: "mizuno", price: 370, img: "images/products/prod-26.jpg" },
+      { id: 30, name: "MIZUNO WAVE PROPHECY PRETO TOTAL", cat: "mizuno", price: 370, img: "images/products/prod-48.jpg" },
+      // TN
+      { id: 31, name: "NIKE TN PRETO / PRATA", cat: "tn", price: 300, img: "images/products/prod-15.jpg" },
+      { id: 32, name: "NIKE TN GRADIENTE CINZA", cat: "tn", price: 300, img: "images/products/prod-20.jpg" },
+      { id: 33, name: "NIKE TN PRETO TOTAL", cat: "tn", price: 300, img: "images/products/prod-16.jpg" },
+      { id: 34, name: "NIKE TN PRETO / BRANCO", cat: "tn", price: 300, img: "images/products/prod-17.jpg" },
+      { id: 35, name: "NIKE TN AZUL / PRETO", cat: "tn", price: 300, img: "images/products/prod-18.jpg" },
+      { id: 36, name: "NIKE TN PRETO / VERMELHO", cat: "tn", price: 300, img: "images/products/prod-19.jpg" },
+      // Jordans novos (fotos reais)
+      { id: 37, name: "AIR JORDAN 4 WHITE CEMENT", cat: "jordan", price: 350, img: "images/products/prod-02.jpg" },
+      { id: 38, name: "AIR JORDAN 4 BRANCO / PRETO", cat: "jordan", price: 350, img: "images/products/prod-03.jpg" },
+      { id: 39, name: "AIR JORDAN 4 BLACK / RED", cat: "jordan", price: 350, img: "images/products/prod-04.jpg" },
+      { id: 40, name: "AIR JORDAN 4 GREY", cat: "jordan", price: 350, img: "images/products/prod-07.jpg" },
+      { id: 41, name: "AIR JORDAN 1 HIGH", cat: "jordan", price: 350, img: "images/products/prod-08.jpg" },
+      // Air Max DN
+      { id: 42, name: "NIKE AIR MAX DN PRETO", cat: "air-max", price: 300, img: "images/products/prod-01.jpg" },
+      { id: 43, name: "NIKE AIR MAX DN PRETO FOSCO", cat: "air-max", price: 300, img: "images/products/prod-09.jpg" },
+      // Air Force / Plataforma (fotos reais + preço especial)
+      { id: 44, name: "AIR FORCE 1 PLATAFORMA BRANCO", cat: "air-force", price: 250, img: "images/products/prod-05.jpg" },
+      { id: 45, name: "AIR FORCE 1 PLATAFORMA PRETO", cat: "air-force", price: 250, img: "images/products/prod-06.jpg" },
+      { id: 46, name: "AIR FORCE 1 BRANCO / CINZA", cat: "air-force", price: 250, img: "images/products/prod-10.jpg" },
+      { id: 47, name: "AIR FORCE 1 BRANCO TOTAL", cat: "air-force", price: 250, img: "images/products/prod-11.jpg" },
+      { id: 48, name: "AIR FORCE 1 PRETO", cat: "air-force", price: 250, img: "images/products/prod-12.jpg" },
+    ];
+
+    const catLabels = {
+      'air-force': 'Air Force',
+      'jordan':    'Air Jordan',
+      'dunk':      'Dunk Low',
+      'ambush':    'Edições especiais',
+      'mizuno':    'Mizuno Prophecy',
+      'tn':        'Nike TN',
+      'air-max':   'Air Max DN'
+    };
+
+    // Descrição curta e imagem de capa de cada categoria
+    const categories = [
+      { key: 'mizuno',    title: 'Mizuno Prophecy',     note: 'Wave Prophecy 13, 14 e 15 — amortecimento lendário.', cover: 22 },
+      { key: 'tn',        title: 'Nike TN',             note: 'Air Max Plus clássico, várias cores.',                 cover: 31 },
+      { key: 'jordan',    title: 'Air Jordan',          note: 'Jordan 1 e 4 — catálogo completo.',                   cover: 15 },
+      { key: 'air-max',   title: 'Air Max DN',          note: 'Modelo com amortecimento em esferas.',               cover: 42 },
+      { key: 'air-force', title: 'Air Force',           note: 'Clássico e plataforma a partir de R$ 250.',          cover: 44 },
+      { key: 'dunk',      title: 'Dunk Low',            note: 'Cores que viraram referência de rua.',               cover: 20 },
+      { key: 'ambush',    title: 'Edições especiais',   note: 'Colaborações em poucas unidades.',                   cover: 21 }
+    ];
+
+    const FALLBACK_IMG = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480"><rect width="480" height="480" fill="#1A1A1A"/><text x="50%" y="50%" fill="#6b6b6b" font-family="sans-serif" font-size="22" text-anchor="middle">Imagem indisponível</text></svg>'
+    );
+
+    /* ----------------------------- Helpers ----------------------------- */
+    const $  = (sel, root = document) => root.querySelector(sel);
+    const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+    const byId = id => products.find(p => p.id === id);
+    const formatPrice = v => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0 });
+    const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    // Troca imagem quebrada por um placeholder (sem loop infinito)
+    function bindFallback(img) {
+      img.addEventListener('error', () => { if (img.src !== FALLBACK_IMG) img.src = FALLBACK_IMG; }, { once: true });
+    }
+
+    /* ----------------------------- Estado ------------------------------ */
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    /* ------------------------- Hero (composição) ----------------------- */
+    function renderHero() {
+      const main = byId(22);  // Mizuno Prophecy 15 (novo)
+      const side = byId(15);  // Jordan 4 (antigo)
+      $('#heroVisual').innerHTML = `
+        <figure class="relative overflow-hidden rounded-3xl border border-line bg-coal">
+          <div class="aspect-[5/6] sm:aspect-square lg:aspect-[5/6] xl:aspect-square">
+            <img src="${main.img}" alt="${main.name}" width="480" height="480" fetchpriority="high" class="h-full w-full object-cover" />
+          </div>
+          <figcaption class="flex items-end justify-between gap-4 border-t border-line bg-coal px-6 py-5">
+            <div>
+              <p class="font-semibold">${main.name}</p>
+              <p class="mt-1 text-sm text-mute">Disponível sob consulta</p>
+            </div>
+            <p class="font-display text-2xl font-semibold">${formatPrice(main.price)}</p>
+          </figcaption>
+        </figure>
+
+        <figure class="absolute -left-6 top-16 hidden w-44 overflow-hidden rounded-2xl border border-line bg-coal shadow-2xl shadow-black/60 sm:block lg:w-52">
+          <img src="${side.img}" alt="${side.name}" width="480" height="480" loading="lazy" class="aspect-square w-full object-cover" />
+          <figcaption class="px-4 py-3">
+            <p class="truncate text-sm font-medium">${side.name}</p>
+            <p class="font-display text-lg font-semibold">${formatPrice(side.price)}</p>
+          </figcaption>
+        </figure>`;
+      $$('#heroVisual img').forEach(bindFallback);
+    }
+
+    /* --------------------------- Categorias ---------------------------- */
+    function renderCategories() {
+      $('#categoryGrid').innerHTML = categories.map(c => {
+        const count = products.filter(p => p.cat === c.key).length;
+        const cover = byId(c.cover);
+        return `
+          <li>
+            <button type="button" data-cat="${c.key}" class="cat-card group relative block w-full overflow-hidden rounded-3xl border border-line bg-coal text-left transition-colors hover:border-neutral-500">
+              <div class="aspect-[16/10] overflow-hidden bg-slate">
+                <img src="${cover.img}" alt="" width="480" height="480" loading="lazy" class="h-full w-full object-cover opacity-90" />
+              </div>
+              <div class="flex items-end justify-between gap-4 p-6 sm:p-8">
+                <div>
+                  <h3 class="h-display text-3xl">${c.title}</h3>
+                  <p class="mt-2 max-w-xs text-mute">${c.note}</p>
+                </div>
+                <p class="flex-none rounded-full border border-line px-3 py-1 text-sm text-neutral-300">${count} ${count === 1 ? 'modelo' : 'modelos'}</p>
+              </div>
+            </button>
+          </li>`;
+      }).join('');
+      $$('#categoryGrid img').forEach(bindFallback);
+    }
+
+    /* ---------------------------- Catálogo ----------------------------- */
+    function getFiltered() {
+      const q = norm(searchQuery);
+      return products.filter(p =>
+        (currentFilter === 'all' || p.cat === currentFilter) &&
+        (!q || norm(p.name).includes(q) || norm(catLabels[p.cat]).includes(q))
+      );
+    }
+
+    function renderProducts() {
+      const grid = $('#productGrid');
+      const list = getFiltered();
+      $('#noResults').hidden = list.length > 0;
+      $('#resultCount').textContent = list.length === 1 ? '1 modelo' : `${list.length} modelos`;
+
+      grid.innerHTML = list.map(p => `
+        <li>
+          <button type="button" data-id="${p.id}" class="card group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-line bg-ink text-left" aria-label="${p.name}, ${formatPrice(p.price)}. Ver detalhes">
+            <span class="relative block aspect-square overflow-hidden bg-slate">
+              <img src="${p.img}" alt="${p.name}" width="480" height="480" loading="lazy" decoding="async" class="h-full w-full object-cover" />
+              <span class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-ink/85 px-3 py-1 text-xs font-medium backdrop-blur">
+                <span class="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true"></span>${catLabels[p.cat]}
+              </span>
+            </span>
+            <span class="flex flex-1 flex-col justify-between gap-4 p-5">
+              <span class="text-sm font-medium leading-snug text-neutral-200">${p.name}</span>
+              <span class="font-display text-2xl font-semibold">${formatPrice(p.price)}</span>
+            </span>
+          </button>
+        </li>`).join('');
+      $$('img', grid).forEach(bindFallback);
+    }
+
+    function setFilter(key) {
+      currentFilter = key;
+      $$('#filters .chip').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === key)));
+      renderProducts();
+    }
+
+    function setSearch(value) {
+      searchQuery = value.trim();
+      // Mantém os dois campos de busca sincronizados
+      $('#searchInput').value = value;
+      $('#catalogSearch').value = value;
+      renderProducts();
+    }
+
+    /* ------------------------------ Modal ------------------------------ */
+    const modal = $('#productModal');
+    let lastTrigger = null;
+    let openedProduct = null;
+
+    function openModal(id, trigger) {
+      const p = byId(id);
+      if (!p) return;
+      openedProduct = p;
+      lastTrigger = trigger || null;
+      const img = $('#modalImg');
+      img.src = p.img; img.alt = p.name; bindFallback(img);
+      $('#modalName').textContent = p.name;
+      $('#modalCat').textContent = catLabels[p.cat];
+      $('#modalPrice').textContent = formatPrice(p.price);
+      modal.showModal();
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() { if (modal.open) modal.close(); }
+
+    modal.addEventListener('close', () => {
+      document.body.style.overflow = '';
+      if (lastTrigger) lastTrigger.focus();
+    });
+    // Clique no fundo escuro fecha
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    $('#modalClose').addEventListener('click', closeModal);
+    // CTA do modal: leva ao contato já com o modelo preenchido
+    $('#modalCta').addEventListener('click', () => {
+      if (openedProduct) $('#fModelo').value = openedProduct.name;
+      lastTrigger = null;
+      closeModal();
+    });
+
+    /* ----------------------------- Eventos ----------------------------- */
+    // Abrir produto
+    $('#productGrid').addEventListener('click', e => {
+      const btn = e.target.closest('[data-id]');
+      if (btn) openModal(Number(btn.dataset.id), btn);
+    });
+
+    // Filtros
+    $('#filters').addEventListener('click', e => {
+      const btn = e.target.closest('[data-filter]');
+      if (btn) setFilter(btn.dataset.filter);
+    });
+
+    // Categorias: filtra e rola até o catálogo
+    $('#categoryGrid').addEventListener('click', e => {
+      const btn = e.target.closest('[data-cat]');
+      if (!btn) return;
+      setSearch('');
+      setFilter(btn.dataset.cat);
+      $('#catalogo').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    $('#clearFilters').addEventListener('click', () => { setSearch(''); setFilter('all'); });
+
+    // Busca (header + catálogo)
+    const searchBar = $('#searchBar');
+    const searchToggle = $('#searchToggle');
+    function toggleSearch(force) {
+      const open = typeof force === 'boolean' ? force : searchBar.hidden;
+      searchBar.hidden = !open;
+      searchToggle.setAttribute('aria-expanded', String(open));
+      if (open) $('#searchInput').focus();
+    }
+    searchToggle.addEventListener('click', () => toggleSearch());
+    $('#searchInput').addEventListener('input', e => setSearch(e.target.value));
+    $('#searchInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') { e.preventDefault(); $('#catalogo').scrollIntoView({ behavior: 'smooth' }); toggleSearch(false); }
+    });
+    $('#catalogSearch').addEventListener('input', e => setSearch(e.target.value));
+
+    // Menu mobile
+    const menuToggle = $('#menuToggle');
+    const mobileMenu = $('#mobileMenu');
+    function toggleMenu(force) {
+      const open = typeof force === 'boolean' ? force : mobileMenu.hidden;
+      mobileMenu.hidden = !open;
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      $('#iconOpen').classList.toggle('hidden', open);
+      $('#iconClose').classList.toggle('hidden', !open);
+    }
+    menuToggle.addEventListener('click', () => toggleMenu());
+    $$('a', mobileMenu).forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+    // Esc fecha busca e menu (o modal nativo já fecha com Esc)
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { toggleSearch(false); toggleMenu(false); }
+    });
+
+    // Header ganha fundo ao rolar
+    const header = $('#header');
+    function onScroll() {
+      const scrolled = window.scrollY > 8;
+      header.classList.toggle('bg-ink/90', scrolled);
+      header.classList.toggle('backdrop-blur-md', scrolled);
+      header.classList.toggle('border-line', scrolled);
+      header.classList.toggle('border-transparent', !scrolled);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Destaca o link da seção atual
+    const navLinks = $$('[data-nav]');
+    const sectionIds = navLinks.map(a => a.getAttribute('href').slice(1));
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(a => {
+          const on = a.getAttribute('href') === '#' + entry.target.id;
+          a.classList.toggle('text-white', on);
+          on ? a.setAttribute('aria-current', 'true') : a.removeAttribute('aria-current');
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sectionIds.forEach(id => { const el = document.getElementById(id); if (el) navObserver.observe(el); });
+
+    // Entrada suave dos blocos (só uma vez por bloco)
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('is-in'); obs.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12 });
+    $$('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ------------------------ Formulário de interesse ------------------ */
+    $('#modelList').innerHTML = products.map(p => `<option value="${p.name}"></option>`).join('');
+
+    $('#interestForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const form = e.currentTarget;
+      const status = $('#formStatus');
+      const nome = form.nome.value.trim();
+      const zap = form.whatsapp.value.trim();
+      const modelo = form.modelo.value.trim();
+      const tam = form.tamanho.value.trim();
+
+      if (!nome || !zap || !modelo) {
+        status.textContent = 'Preencha nome, WhatsApp e modelo para continuar.';
+        (!nome ? form.nome : !zap ? form.whatsapp : form.modelo).focus();
+        return;
+      }
+
+      const text = `Oi, Street! Meu nome é ${nome}. Tenho interesse no modelo ${modelo}` +
+                   (tam ? `, tamanho ${tam}` : '') + `. Meu WhatsApp: ${zap}.`;
+
+      if (WHATSAPP_NUMBER) {
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+        status.textContent = 'Abrindo o WhatsApp com a sua mensagem.';
+        return;
+      }
+
+      // Sem número de WhatsApp configurado: copia a mensagem e abre o direct do Instagram
+      let copied = false;
+      try { await navigator.clipboard.writeText(text); copied = true; } catch (_) { /* segue sem copiar */ }
+      window.open(`https://ig.me/m/${INSTAGRAM_USER}`, '_blank', 'noopener');
+      status.textContent = copied
+        ? 'Mensagem copiada. Cole no direct do Instagram que acabamos de abrir.'
+        : `Abrimos o direct do Instagram. Envie esta mensagem: ${text}`;
+    });
+
+    /* ------------------------------- Init ------------------------------ */
+    $('#year').textContent = new Date().getFullYear();
+    renderHero();
+    renderCategories();
+    renderProducts();
+  </script>
+</body>
+</html>
